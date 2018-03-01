@@ -7,6 +7,8 @@ $bg-gray: #F2F2F2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+    position: relative;
 
     &.centered {
         justify-content: center;
@@ -16,17 +18,33 @@ $bg-gray: #F2F2F2;
         border: 1px solid #999;
 
         .canvas {
+            &.bases {
+                background: #fff;
+                justify-content: space-between;
+            }
+            .layer.support {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%; height: 100%;
+            }
             width: 100%;
             height: 100%;
+            position: relative;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            background: #fff;
 
             .base {
                 background: rgb(112, 158, 215);
                 width: 100%;
                 height: 25%;
+            }
+
+            .rect {
+                width: 293px;
+                height: 20px;
+                background: red;
             }
 
         }
