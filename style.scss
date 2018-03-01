@@ -1,0 +1,38 @@
+$bg-gray: #F2F2F2;
+
+.block-input {
+    height: 100%;
+    background-color: $bg-gray;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &.centered {
+        justify-content: center;
+    }
+    
+    &.illustration {
+        border: 1px solid #999;
+
+        .canvas {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #fff;
+
+            .base {
+                background: rgb(112, 158, 215);
+                width: 100%;
+                height: 25%;
+            }
+
+        }
+    }
+}
+
+body {
+    padding: 25px;
+}
