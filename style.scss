@@ -7,13 +7,13 @@ $bg-gray: #F2F2F2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
     position: relative;
 
     &.centered {
         justify-content: center;
     }
-    
+
     &.illustration {
         border: 1px solid #999;
 
@@ -28,7 +28,6 @@ $bg-gray: #F2F2F2;
                 background: #fff;
                 justify-content: space-between;
             }
-
 
             .layer {
                 position: absolute;
@@ -60,18 +59,18 @@ $bg-gray: #F2F2F2;
                 $cubeHeight: 110px !global;
                 $rectWidth: 40px;
                 $trapeciaShift: ($cubeHeight - $rectWidth) / 2;
-                $trapeciaHeight: 100px;
+                $trapeciaHeight: 80px !global;
 
                 width: $rectWidth;
                 height: $cubeHeight;
                 background: red;
 
                 &.trapecia {
-                    background: #fff;
+                    background: transparent;
                     border-left: $trapeciaShift solid transparent;
                     border-right: $trapeciaShift solid transparent;
                     height: 0;
-                    
+
                     &.upper {
                         border-bottom: $trapeciaHeight solid #000;
                     }
@@ -94,13 +93,25 @@ $bg-gray: #F2F2F2;
                 color: red;
                 border-top: 2px solid #222;
                 width: 90px;
-                
+
                 &.last {
                     border-bottom: 2px solid #222;
                 }
+
+                &.trapecia {
+                    height: $trapeciaHeight - 24px; // WTF? .legend padding & border?
+                }
+
+                &.ot {
+                    height: 19px;
+                }
+
+                &.depth {
+                    height: 47px;
+                }
             }
-            
-            .placeholder {
+
+            .placeholder-legends-left {
                 height: $cubeHeight;
             }
         }
