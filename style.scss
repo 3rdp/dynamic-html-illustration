@@ -46,9 +46,11 @@ $bg-gray: #F2F2F2;
 
             .rect {
                 $cubeHeight: 110px;
-                $trapeciaShift: 40px;
+                $rectWidth: 40px;
+                $trapeciaShift: ($cubeHeight - $rectWidth) / 2;
                 $trapeciaHeight: 100px;
-                width: 30px;
+
+                width: $rectWidth;
                 height: $cubeHeight;
                 background: red;
 
@@ -69,11 +71,9 @@ $bg-gray: #F2F2F2;
 
                 &.main {
                     // background: #999;
-                    width: $cubeHeight;
-                    height: $cubeHeight;
+                    width: $cubeHeight; height: $cubeHeight;
                 }
             }
-
         }
     }
 }
