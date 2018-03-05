@@ -61,7 +61,8 @@ $baseGap: 110px + 80px + 80px + 40px + 40px;
                 }
 
                 &.legends {
-                    padding-left: 50px;
+                    align-items: center;
+                    right: 60px;
                 }
             }
 
