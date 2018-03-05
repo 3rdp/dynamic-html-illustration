@@ -73,6 +73,7 @@ $legendBorder: 2px dashed #222;
                     border-left: $trapeciaShift solid transparent;
                     border-right: $trapeciaShift solid transparent;
                     height: 0;
+                    box-sizing: content-box;
 
                     &.upper {
                         border-bottom: $trapeciaHeight solid $trapeColor;
