@@ -6,6 +6,17 @@ $mainRectColor: #eee;
 $legendSpanColor: #000;
 $legendBorder: 2px dashed #222;
 
+$upperHeight: 20px;
+$upperDepth: 20px;
+/*
+1. Main Rect            110px
+2. Upper Trapecia       80px
+3. Bottom Trapecia      80px
+4. Ot                   40px
+5. Ob                   40px
+*/
+$baseGap: 110px + 80px + 80px + 40px + 40px;
+
 .block-input {
     height: 100%;
     background-color: $bg-gray;
@@ -29,10 +40,13 @@ $legendBorder: 2px dashed #222;
             position: relative;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            background: $baseColor;
 
-            &.bases {
+            .base-gap {
                 background: #fff;
-                justify-content: space-between;
+                height: $baseGap;
+                width: 100%;
             }
 
             .layer {
@@ -55,7 +69,6 @@ $legendBorder: 2px dashed #222;
             .base {
                 background: $baseColor;
                 width: 100%;
-                height: 25%;
             }
 
             .rect {
@@ -100,6 +113,7 @@ $legendBorder: 2px dashed #222;
                 font-weight: bold;
                 border-top: $legendBorder;
                 width: 90px;
+                box-sizing: content-box;
 
                 &.last {
                     border-bottom: $legendBorder;
