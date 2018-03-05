@@ -1,8 +1,10 @@
 $bg-gray: #F2F2F2;
-$baseColor: rgb(112, 158, 215);
+$baseColor: #00e9f6;
 $rectColor: #000;
 $trapeColor: #888;
 $mainRectColor: #eee;
+$legendSpanColor: #000;
+$legendBorder: 2px dashed #222;
 
 .block-input {
     height: 100%;
@@ -94,12 +96,12 @@ $mainRectColor: #eee;
                 font-size: 20px;
                 font-family: Arial, sans-serif;
                 padding: 10px 0px;
-                color: red;
-                border-top: 2px solid #222;
+                font-weight: bold;
+                border-top: $legendBorder;
                 width: 90px;
 
                 &.last {
-                    border-bottom: 2px solid #222;
+                    border-bottom: $legendBorder;
                 }
 
                 &.trapecia {
@@ -115,13 +117,13 @@ $mainRectColor: #eee;
                 }
 
                 .legend-line {
-                    $triangleHeightBord: 7px solid red;
+                    $triangleHeightBord: 7px solid $legendSpanColor;
                     display: flex;
                     justify-content: space-between;
                     flex-direction: column;
                     width: 2px;
                     height: 100%;
-                    background: red;
+                    background: $legendSpanColor;
                     position: absolute;
                     top: 0;
                     left: 28px;
